@@ -1,0 +1,88 @@
+//--------------------------------------*\
+//  Defaults
+//--------------------------------------*/
+
+// Use Sass comments for this file to prevent output to top of
+// development compiled .css
+
+$show-baseline:      false!default;
+
+//--------------------------------------*\
+//  Colors
+//--------------------------------------*/
+
+// Brand colours
+$brand-primary:      #111111;
+$brand-secondary:    #222222;
+$brand-tertiary:     #333333;
+
+// Grays
+$gray-light:         #eeeeee;
+$gray-med:           #aaaaaa;
+$gray-dark:          #cccccc;
+
+// Greys for the British!
+$grey-light:         $gray-light;
+$grey-med:           $gray-med;
+$grey-dark:          $gray-dark;
+
+// Black & white
+$black:              #000;
+$white:              #fff;
+
+
+//--------------------------------------*\
+//  Base Type
+//--------------------------------------*/
+
+// Define font stacks
+$font-primary:       "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-secondary:     "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+// Base font sizes
+$base-font-size:     16px!default;
+$base-line-height:   26px!default; // = 1.65 if base-font-size is 16px
+
+// Big sizes
+$giga-size:          96px!default;
+$mega-size:          72px!default;
+$kilo-size:          48px!default;
+
+// Heading sizes
+$h1-size:            36px!default; // .alpha
+$h2-size:            30px!default; // .beta
+$h3-size:            24px!default; // .gamma
+$h4-size:            20px!default; // .delta
+$h5-size:            16px!default; // .epsilon
+$h6-size:            14px!default; // .zeta
+
+// Small sizes
+$milli-size:         12px!default;
+$micro-size:         10px!default;
+
+
+//--------------------------------------*\
+//  Spacing set up
+//--------------------------------------*/
+
+// Spacing for vertical rhythm based off the line-height
+
+// Base spacing from line-height
+$base-spacing-unit: $base-line-height!default;
+
+// Half spacing
+$half-spacing-unit: $base-spacing-unit / 2!default;
+
+// Quarter spacing
+$quarter-spacing-unit: $base-spacing-unit / 4!default;
+
+// Calc line-height ratio (e.g 16px/24px = 1.5)
+$line-height-ratio: $base-line-height / $base-font-size;
+
+
+//--------------------------------------*\
+//  Globals
+//--------------------------------------*/
+
+// Border radius
+$global-radius:      6px;

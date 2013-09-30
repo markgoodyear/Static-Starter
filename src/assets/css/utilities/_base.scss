@@ -1,0 +1,25 @@
+/*--------------------------------------*\
+  Base
+\*--------------------------------------*/
+
+// border-box
+* {
+  &,
+  &:before,
+  &:after {
+    @include vendor(box-sizing, border-box);
+  }
+}
+
+// Base set up
+html {
+  font: #{($base-font-size/16px)*1em}/#{$line-height-ratio} $font-primary;
+  overflow-y: scroll;
+  min-height: 100%;
+
+  // Baseline grid overlay
+  @if $show-baseline == true {
+    $baseline-height: strip-units($base-font-size);
+    background-image: url(http://basehold.it/i/#{$baseline-height});
+  }
+}

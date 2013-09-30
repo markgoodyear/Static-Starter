@@ -1,0 +1,16 @@
+/*--------------------------------------*\
+  Largeprint
+\*--------------------------------------*/
+
+/**
+ * Big type for use in heroes, promos, etc.
+ */
+.giga {
+  @include font-size($giga-size);
+}
+.mega {
+  @include font-size($mega-size);
+}
+.kilo {
+  @include font-size($kilo-size);
+}
