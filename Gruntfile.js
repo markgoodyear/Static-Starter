@@ -146,6 +146,11 @@ module.exports = function(grunt) {
       }
     },
 
+
+    /**
+     * Autoprefixer
+     * https://github.com/nDmitry/grunt-autoprefixer
+     */
     autoprefixer: {
       dist: {
         options: {
@@ -309,12 +314,22 @@ module.exports = function(grunt) {
       sass: {
         files: '<%= project.src %>/assets/css/**/*.{scss,sass}',
         tasks: ['sass:dev', 'autoprefixer', 'cssmin'],
+        options: {
+          nospawn: true,
+          // We dont want to livereload with this scss target
+          // As .scss files will be fed to the livereload server and cause a full page reload
+        }
       },
 
       // JShint, concat + uglify JS on change
       js: {
         files: '<%= jshint.files %>',
-        tasks: ['jshint', 'concat', 'uglify']
+        tasks: ['jshint', 'concat', 'uglify'],
+        options: {
+          nospawn: true,
+          interrupt: true,
+          // Dont livereload here either
+        },
       },
 
       compressImages: {
@@ -331,6 +346,7 @@ module.exports = function(grunt) {
       livereload: {
         options: { livereload: LIVERELOAD_PORT },
         files: [
+          'Gruntfile.js',                             // Reload on Gruntfile change
           '<%= project.dist %>/assets/css/**/*.css',  // all .css files in css/
           '<%= project.dist %>/assets/js/**/*.js',    // all .js files in js/
           '**/*.{html,php}',                          // all .html + .php files
